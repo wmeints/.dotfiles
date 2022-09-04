@@ -1,7 +1,10 @@
 {
   "dependencies": {
     "coc-emmet": ">=1.1.6",
+    "coc-eslint": ">=1.5.8",
     "coc-json": ">=1.6.1",
+    "coc-omnisharp": ">=0.0.28",
+    "coc-prettier": ">=9.3.1",
     "coc-tsserver": ">=1.11.6"
   }
 }
