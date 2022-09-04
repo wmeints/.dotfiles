@@ -7,4 +7,6 @@ return require("packer").startup(function()
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    use { 'neoclide/coc.nvim', branch = 'release' }
 end)
+

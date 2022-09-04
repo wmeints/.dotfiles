@@ -5,3 +5,7 @@ local lsp_flags = {
 require("lspconfig").pyright.setup{
     lsp_flags =  lsp_flags
 }
+
+require("lspconfig").tsserver.setup{
+    lsp_flags = lsp_flags
+}
