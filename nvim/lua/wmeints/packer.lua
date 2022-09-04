@@ -8,5 +8,7 @@ return require("packer").startup(function()
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use { 'neoclide/coc.nvim', branch = 'release' }
+    use { 'junegunn/fzf' }
+    use 'junegunn/fzf.vim'
 end)
 
