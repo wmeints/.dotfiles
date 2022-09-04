@@ -1,4 +1,5 @@
 return require("packer").startup(function()
     use("wbthomason/packer.nvim")
     use("folke/tokyonight.nvim")
+    use("neovim/nvim-lspconfig")
 end)
