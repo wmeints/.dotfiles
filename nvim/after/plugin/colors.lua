@@ -1,5 +1,3 @@
-vim.g.tokyonight_style = "storm"
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_transparent_sidebar = true
+vim.g.gruvbox_italic = 1
 
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme gruvbox")
