@@ -11,5 +11,6 @@ return require("packer").startup(function()
     use 'junegunn/fzf.vim'
     use 'OmniSharp/omnisharp-vim'
     use 'williamboman/nvim-lsp-installer'
+    use { 'neoclide/coc.nvim', branch = 'release' }
 end)
 
