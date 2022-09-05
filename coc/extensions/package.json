@@ -4,6 +4,7 @@
     "coc-emmet": ">=1.1.6",
     "coc-eslint": ">=1.5.8",
     "coc-html": ">=1.6.1",
+    "coc-jedi": ">=0.32.0",
     "coc-json": ">=1.6.1",
     "coc-omnisharp": ">=0.0.28",
     "coc-prettier": ">=9.3.1",
