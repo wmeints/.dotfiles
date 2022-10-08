@@ -23,6 +23,10 @@ return require("packer").startup(function()
     use 'mfussenegger/nvim-lint'
     use 'mhartington/formatter.nvim'
 
+    -- Rust specific tools
+    use 'nvim-lua/lsp_extensions.nvim'
+    use 'simrat39/rust-tools.nvim'
+
     -- Autocomplete config
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -34,7 +38,10 @@ return require("packer").startup(function()
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
+
+    use 'TimUntersberger/neogit'
 end)
 

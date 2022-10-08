@@ -15,3 +15,6 @@ nnoremap("<c-l>","<c-w>l")
 
 -- Awesome but deadly
 inoremap("<C-c>", "<Esc>")
+
+-- Git commands
+nnoremap("<leader>kc", ":Neogit commit<CR>")
