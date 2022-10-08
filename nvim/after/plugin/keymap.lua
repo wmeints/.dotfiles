@@ -3,8 +3,8 @@ local vnoremap = require("wmeints.remap").vnoremap
 
 -- Plugin actions
 nnoremap("<leader>t", ":NERDTreeToggle<CR>")
-nnoremap("<leader>f", "<Plug>(coc-format-selected)")
-vnoremap("<leader>f", "<Plug>(coc-format-selected)")
+nnoremap("<leader>f", ":Format<CR>")
+nnoremap("<leader>fw", ":FormatWrite<CR>")
 nnoremap("<leader>p", ":FZF<CR>")
 
 -- Window management
