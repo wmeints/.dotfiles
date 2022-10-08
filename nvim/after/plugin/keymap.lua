@@ -5,7 +5,6 @@ local vnoremap = require("wmeints.remap").vnoremap
 nnoremap("<leader>t", ":NERDTreeToggle<CR>")
 nnoremap("<leader>f", ":Format<CR>")
 nnoremap("<leader>fw", ":FormatWrite<CR>")
-nnoremap("<leader>p", ":FZF<CR>")
 
 -- Window management
 nnoremap("<c-h>","<c-w>h")

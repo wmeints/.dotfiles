@@ -19,7 +19,7 @@ cmp.setup({
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
     }),
     sources = {
-        { name = 'nvim-lsp' },
+        { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'buffer' },
     }
@@ -60,6 +60,7 @@ end
 require('lspconfig').rust_analyzer.setup(config())
 require('lspconfig').tsserver.setup(config())
 require('lspconfig').pyright.setup(config())
+require('lspconfig').csharp_ls.setup(config())
 require('lspconfig').sumneko_lua.setup(config({
     settings = {
         Lua = {
@@ -71,10 +72,11 @@ require('lspconfig').sumneko_lua.setup(config({
             },
             workspace = {
                 library = {
-                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+                   [vim.fn.expand('$VIMRUNTIME/lua')] = true,
                     [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
                 }
             }
         }
     }
 }))
+

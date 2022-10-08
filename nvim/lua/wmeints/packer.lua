@@ -6,15 +6,18 @@ return require("packer").startup(function()
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use { 'junegunn/fzf' }
-    use 'OmniSharp/omnisharp-vim'
+
+    use("nvim-lua/plenary.nvim")
+    use("nvim-lua/popup.nvim")
+    use("nvim-telescope/telescope.nvim")
+    use("ThePrimeagen/git-worktree.nvim")
 
     -- Language server config
     use {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig'
-    }    
+    }
     use 'mfussenegger/nvim-dap'
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use 'mfussenegger/nvim-lint'
