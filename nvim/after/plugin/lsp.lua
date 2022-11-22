@@ -43,6 +43,9 @@ require('lspconfig').pyright.setup({
 require('lspconfig').csharp_ls.setup({
     capabilities = capabilities
 })
+require('lspconfig').taplo.setup({
+    capabilities = capabilities
+})
 require('lspconfig').sumneko_lua.setup({
     capabilities = capabilities,
     settings = {
@@ -63,23 +66,20 @@ require('lspconfig').sumneko_lua.setup({
     }
 })
 
-local rt = {
-    server = {
-        settings = {
-            on_attach = function(_, bufnr)
-                -- Hover actions
-                vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-                -- Code action groups
-                vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-                require 'illuminate'.on_attach(client)
-            end,
-            ["rust-analyzer"] = {
-                checkOnSave = {
-                    command = "clippy"
-                }, 
-            },
-        }
-    },
-}
+local rt = require("rust-tools")
 
-require('rust-tools').setup(rt)
+rt.setup({
+    server = {
+        on_attach = function(_, bufnr)
+            -- Hover actions
+            vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+            -- Code action groups
+            vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+        end,
+        ["rust-analyzer"] = {
+            checkOnSave = {
+                command = "clippy"
+            },
+        },
+    },
+})
