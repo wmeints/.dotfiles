@@ -43,5 +43,7 @@ return require("packer").startup(function()
     use 'saadparwaiz1/cmp_luasnip'
 
     use 'TimUntersberger/neogit'
+
+    use 'voldikss/vim-floaterm'
 end)
 
