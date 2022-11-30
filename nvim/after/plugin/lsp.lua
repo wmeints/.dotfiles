@@ -33,20 +33,43 @@ local inoremap = require('wmeints.remap').inoremap
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+local function on_attach(_, bufnr)
+    local keymap_opts = { buffer = bufnr }
+
+    -- Code navigation and shortcuts
+    vim.keymap.set("n", "<c-]>", vim.lsp.buf.definition, keymap_opts)
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, keymap_opts)
+    vim.keymap.set("n", "gD", vim.lsp.buf.implementation, keymap_opts)
+    vim.keymap.set("n", "<c-k>", vim.lsp.buf.signature_help, keymap_opts)
+    vim.keymap.set("n", "1gD", vim.lsp.buf.type_definition, keymap_opts)
+    vim.keymap.set("n", "gr", vim.lsp.buf.references, keymap_opts)
+    vim.keymap.set("n", "g0", vim.lsp.buf.document_symbol, keymap_opts)
+    vim.keymap.set("n", "gW", vim.lsp.buf.workspace_symbol, keymap_opts)
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, keymap_opts)
+end
+
 require('lspconfig').rust_analyzer.setup({
+    on_attach = on_attach,
     capabilities = capabilities
 })
-
+require('lspconfig').solargraph.setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+})
 require('lspconfig').tsserver.setup({
+    on_attach = on_attach,
     capabilities = capabilities
 })
 require('lspconfig').pyright.setup({
+    on_attach = on_attach,
     capabilities = capabilities
 })
 require('lspconfig').csharp_ls.setup({
+    on_attach = on_attach,
     capabilities = capabilities
 })
 require('lspconfig').taplo.setup({
+    on_attach = on_attach,
     capabilities = capabilities
 })
 require('lspconfig').sumneko_lua.setup({
@@ -84,26 +107,7 @@ rt.setup({
         },
     },
     server = {
-        on_attach = function(_, bufnr)
-            local keymap_opts = { buffer = bufnr }
-
-            -- Hover actions
-            vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, keymap_opts)
-
-            -- Code action groups
-            vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, keymap_opts)
-
-            -- Code navigation and shortcuts
-            vim.keymap.set("n", "<c-]>", vim.lsp.buf.definition, keymap_opts)
-            vim.keymap.set("n", "K", vim.lsp.buf.hover, keymap_opts)
-            vim.keymap.set("n", "gD", vim.lsp.buf.implementation, keymap_opts)
-            vim.keymap.set("n", "<c-k>", vim.lsp.buf.signature_help, keymap_opts)
-            vim.keymap.set("n", "1gD", vim.lsp.buf.type_definition, keymap_opts)
-            vim.keymap.set("n", "gr", vim.lsp.buf.references, keymap_opts)
-            vim.keymap.set("n", "g0", vim.lsp.buf.document_symbol, keymap_opts)
-            vim.keymap.set("n", "gW", vim.lsp.buf.workspace_symbol, keymap_opts)
-            vim.keymap.set("n", "gd", vim.lsp.buf.definition, keymap_opts)
-        end,
+        on_attach = on_attach,
         settings = {
             ["rust-analyzer"] = {
                 checkOnSave = {

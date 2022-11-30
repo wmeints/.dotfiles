@@ -27,6 +27,9 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 
 -- Show floating terminal
-nnoremap("<leader>ft", ":FloatermNew --name=myfloat --height=0.8 --width=0.7 --autoclose=2 bash <CR> ")
-nnoremap("t", ":FloatermToggle myfloat<CR>")
+nnoremap("<leader>ft", ":FloatermNew --name=theterminal --height=0.8 --width=0.7 --autoclose=2 bash <CR> ")
+nnoremap("t", ":FloatermToggle theterminal<CR>")
 tnoremap("<Esc>", "<C-\\><C-n>:q<CR>")
+
+-- Format code
+vim.keymap.set("n","<C-f>",":Format<CR>")
