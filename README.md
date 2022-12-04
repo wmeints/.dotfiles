@@ -18,7 +18,7 @@ You can find the tool on [the neovim website](https://neovim.io).
 - [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - Autocomplete plugin for neovim
 - [NERDTree](https://github.com/preservevim/nerdtree) - Tree navigation
 - [LuaLine](https://github.com/nvim-lualine/lualine.nvim) - Status line
-- [FZF](https://github.com/junegunn/fzf.vim) - Fuzzy file finder
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy file finder
 
 ### Oh-my-posh
 
