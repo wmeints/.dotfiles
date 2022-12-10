@@ -36,12 +36,14 @@ For Windows:
 * [7-Zip](https://www.7-zip.org/) (Must be available on PATH)
 * [Oh-my-posh](https://ohmyposh.dev/)
 * [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+* [Omnisharp](https://github.com/OmniSharp/omnisharp-roslyn) (Install this in `$HOME/.omnisharp`)
 
 For Linux:
 
 * [Oh-my-posh](https://ohmyposh.dev/)
 * [Homebrew](https://brew.sh/)
 * [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+* [Omnisharp](https://github.com/OmniSharp/omnisharp-roslyn) (Install this in `$HOME/.omnisharp`)
 
 **Note:** On Linux you can run `brew install neovim` to get Neovim.
 

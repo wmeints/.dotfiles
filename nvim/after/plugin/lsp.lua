@@ -49,6 +49,8 @@ local function on_attach(_, bufnr)
     vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action, keymap_opts)
 end
 
+local omnisharp_path = vim.fn.expand("$HOME/.omnisharp/Omnisharp.dll")
+
 require('lspconfig').rust_analyzer.setup({
     on_attach = on_attach,
     capabilities = capabilities
@@ -61,9 +63,13 @@ require('lspconfig').pyright.setup({
     on_attach = on_attach,
     capabilities = capabilities
 })
-require('lspconfig').csharp_ls.setup({
+require('lspconfig').omnisharp.setup({
     on_attach = on_attach,
-    capabilities = capabilities
+    capabilities = capabilities,
+    cmd = { "dotnet", omnisharp_path },
+    enable_editor_config_support = true,
+    enable_roslyn_analyzers = true,
+    enable_import_completion = true,
 })
 require('lspconfig').taplo.setup({
     on_attach = on_attach,
