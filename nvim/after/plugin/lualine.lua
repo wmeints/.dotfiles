@@ -1,17 +1,17 @@
 require("lualine").setup {
     options = {
-        icons_enabled = true,
-        theme = "gruvbox_dark",
-        section_separators = { left = '', right = '' },
+        icons_enabled        = true,
+        theme                = "gruvbox_dark",
+        section_separators   = { left = '', right = '' },
         component_separators = { left = '', right = '' },
-        disabled_filetypes = {
+        disabled_filetypes   = {
             statusline = {},
             winbar = {}
         },
-        ignore_focus = {},
-        always_divide_middle  = true,
-        globalstatus = false,
-        refresh = {
+        ignore_focus         = {},
+        always_divide_middle = true,
+        globalstatus         = false,
+        refresh              = {
             statusline = 1000,
             tabline = 1000,
             winbar = 1000
@@ -28,8 +28,8 @@ require("lualine").setup {
     inactive_section = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = {'filename'},
-        lualine_x = {'location'},
+        lualine_c = { 'filename' },
+        lualine_x = { 'location' },
         lualine_y = {},
         lualine_z = {}
     },

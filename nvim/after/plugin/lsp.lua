@@ -55,14 +55,22 @@ require('lspconfig').rust_analyzer.setup({
     on_attach = on_attach,
     capabilities = capabilities
 })
+
 require('lspconfig').tsserver.setup({
     on_attach = on_attach,
     capabilities = capabilities
 })
+
+require('lspconfig').jsonls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+})
+
 require('lspconfig').pyright.setup({
     on_attach = on_attach,
     capabilities = capabilities
 })
+
 require('lspconfig').omnisharp.setup({
     on_attach = on_attach,
     capabilities = capabilities,
@@ -71,10 +79,12 @@ require('lspconfig').omnisharp.setup({
     enable_roslyn_analyzers = true,
     enable_import_completion = true,
 })
+
 require('lspconfig').taplo.setup({
     on_attach = on_attach,
     capabilities = capabilities
 })
+
 require('lspconfig').sumneko_lua.setup({
     capabilities = capabilities,
     settings = {
@@ -120,3 +130,6 @@ rt.setup({
         },
     },
 })
+
+-- Enable copilot :-)
+vim.cmd [[ ":Copilot enable" ]]
