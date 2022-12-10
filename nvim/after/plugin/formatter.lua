@@ -16,6 +16,9 @@ require("formatter").setup {
         },
         rust = {
             require("formatter.filetypes.rust").rustfmt,
+        },
+        cs = {
+            require("formatter.filetypes.cs").uncrustify,
         }
     }
 }

@@ -30,3 +30,14 @@ vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 nnoremap("<leader>ft", ":FloatermNew --name=theterminal --height=0.8 --width=0.7 --autoclose=2 bash <CR> ")
 nnoremap("t", ":FloatermToggle theterminal<CR>")
 tnoremap("<Esc>", "<C-\\><C-n>:q<CR>")
+
+-- Debugging tools
+nnoremap("<F5>", ":lua require('dap').continue()<CR>")
+nnoremap("<F9>", ":lua require('dap').toggle_breakpoint()<CR>")
+nnoremap("<F10>", ":lua require('dap').step_over()<CR>")
+nnoremap("<F11>", ":lua require('dap').step_into()<CR>")
+nnoremap("<F12>", ":lua require('dap').stop_out()<CR>")
+
+-- Buffer navigation
+nnoremap("<C-Right>", ":bn<CR>")
+nnoremap("<C-Left>", ":bp<CR>")
