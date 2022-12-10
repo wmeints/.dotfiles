@@ -19,6 +19,11 @@ You can find the tool on [the neovim website](https://neovim.io).
 - [NERDTree](https://github.com/preservevim/nerdtree) - Tree navigation
 - [LuaLine](https://github.com/nvim-lualine/lualine.nvim) - Status line
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy file finder
+- [Bufferline](https://github.com/akinsho/bufferline.nvim) - A snazzy bufferline to navigate through the buffers
+- [Tokyonight](https://github.com/folke/tokyonight.nvim) - A nice theme for neovim
+- [Formatter](https://github.com/mhartington/formatter.nvim) - Automatic formatting for various file types
+- [Github Copilot](https://github.com/github/copilot.vim) - Copilot, essential by now
+- [Floating terminal](use 'voldikss/vim-floaterm') - Have a floating terminal window in Neovim
 
 ### Oh-my-posh
 
