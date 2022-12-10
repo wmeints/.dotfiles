@@ -84,3 +84,34 @@ If you're working on Linux with bash, add the following code to your `.bashrc` f
 ```bashrc
 eval "$(oh-my-posh init bash --config ~/.dotfiles/oh-my-posh/willem.omp.json)"
 ```
+
+## Documentation
+
+It takes some getting used to things like neovim. In fact, I'm still learning neovim as I'm writing this.
+So here's a few helpful hints for things that are specific for my setup.
+
+### Keymap
+
+I've created a number of key mappings to work with neovim plugins:
+
+* <kbd>space</kbd><kbd>t</kbd> - Toggles the tree on the left of the screen
+* <kbd>space</kbd><kbd>ff</kbd> - Toggles the telescope to quickly navigate between files
+* <kbd>space</kbd><kbd>fb</kbd> - Toggles the telescope to quickly navigate between buffers (open files)
+* <kbd>space</kbd><kbd>ft</kbd> - Toggles the floating terminal
+
+In addition to these specific actions to work with plugins, I've also added keymaps for working with content.
+First, I have autocomplete mapped pretty much the same as you would have it in any other IDE.
+
+* <kbd>Ctrl</kbd><kbd>Space</kbd> - Show autocomplete options for the current position
+* <kbd>Tab</kbd>/<kbd>Shift</kbd><kbd>Tab</kbd> - When autocomplete is visible, navigate between options
+* <kbd>Ctrl</kbd><kbd>e</kbd> - Close the autocomplete options
+* <kbd>Enter</kbd> - Accept the suggestion
+
+Next, there's some keymappings to do other things with code:
+
+* <kbd>g</kbd><kbd>d</kbd> - Go to definition
+* <kbd>g</kbd><kbd>D</kbd> - Go to implementation
+* <kbd>g</kbd><kbd>r</kbd> - Show references
+* <kbd>Ctrl</kbd><kbd>k</kbd> - Show signature help
+
+Finally, I managed to enable code quick fixes with <kbd>Space</kbd><kbd>a</kbd>.
