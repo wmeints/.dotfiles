@@ -39,6 +39,9 @@ I'm using Neovim on Windows, but this configuration should work the same on Linu
 3. Start neovim from the terminal with the command `nvim`
 4. Run the command: `:PackerSync` and close neovim with `:q`
 
+**Please note** You may have to run `:PackerSync` multiple times to get rid of all the errors. 
+Treesitter can be a pain sometimes
+
 After performing these steps, make sure you restart neovim to get the latest settings.
 
 ### Oh-my-posh configuration
