@@ -1,6 +1,6 @@
 return require("packer").startup(function()
     use "wbthomason/packer.nvim"
-    use "gruvbox-community/gruvbox"
+    use "folke/tokyonight.nvim"
     use "preservim/nerdtree"
 
     use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
