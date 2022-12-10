@@ -41,7 +41,7 @@ For Linux:
 
 * [Oh-my-posh](https://ohmyposh.dev/)
 * [Homebrew](https://brew.sh/)
-* [Neovim]
+* [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
 **Note:** On Linux you can run `brew install neovim` to get Neovim.
 
