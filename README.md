@@ -29,6 +29,22 @@ You can find the installation files on [their website](https://ohmyposh.dev/).
 
 This section describes how to set up various programs to use this dotfiles collection.
 
+### Required tooling
+
+For Windows:
+
+* [7-Zip](https://www.7-zip.org/) (Must be available on PATH)
+* [Oh-my-posh](https://ohmyposh.dev/)
+* [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+
+For Linux:
+
+* [Oh-my-posh](https://ohmyposh.dev/)
+* [Homebrew](https://brew.sh/)
+* [Neovim]
+
+**Note:** On Linux you can run `brew install neovim` to get Neovim.
+
 ### Neovim configuration
 
 I'm using Neovim on Windows, but this configuration should work the same on Linux. I'm using the settings on Ubuntu
