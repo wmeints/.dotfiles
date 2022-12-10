@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "rust_analyzer" }
+    automatic_installation = true,
 })
 
 local cmp = require('cmp')
@@ -46,13 +46,10 @@ local function on_attach(_, bufnr)
     vim.keymap.set("n", "g0", vim.lsp.buf.document_symbol, keymap_opts)
     vim.keymap.set("n", "gW", vim.lsp.buf.workspace_symbol, keymap_opts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, keymap_opts)
+    vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action, keymap_opts)
 end
 
 require('lspconfig').rust_analyzer.setup({
-    on_attach = on_attach,
-    capabilities = capabilities
-})
-require('lspconfig').solargraph.setup({
     on_attach = on_attach,
     capabilities = capabilities
 })
@@ -84,7 +81,7 @@ require('lspconfig').sumneko_lua.setup({
             },
             workspace = {
                 library = {
-                   [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
                     [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
                 }
             }
