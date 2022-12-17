@@ -47,6 +47,7 @@ local function on_attach(_, bufnr)
     vim.keymap.set("n", "gW", vim.lsp.buf.workspace_symbol, keymap_opts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, keymap_opts)
     vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action, keymap_opts)
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, keymap_opts)
 end
 
 local omnisharp_path = vim.fn.expand("$HOME/.omnisharp/Omnisharp.dll")
@@ -108,6 +109,11 @@ require('lspconfig').sumneko_lua.setup({
 require('lspconfig').marksman.setup({
     on_attach = on_attach,
     capabilities = capabilities,
+})
+
+require('lspconfig').angularls.setup({
+    on_attach = on_attach,
+    capabilities = capabilities
 })
 
 local rt = require("rust-tools")

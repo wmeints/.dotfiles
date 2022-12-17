@@ -30,8 +30,10 @@ return require("packer").startup(function()
     use 'nvim-lua/lsp_extensions.nvim'
     use 'simrat39/rust-tools.nvim'
 
-    -- Github copilot
+    -- HTML specific tools
+    use 'mattn/emmet-vim'
 
+    -- Github copilot
     use 'github/copilot.vim'
 
     -- Autocomplete config
