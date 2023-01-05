@@ -19,6 +19,12 @@ require("formatter").setup {
         },
         cs = {
             require("formatter.filetypes.cs").uncrustify,
+        },
+        typescript = {
+            require("formatter.filetypes.typescript").prettier,
+        },
+        html = {
+            require("formatter.filetypes.html").prettier,
         }
     }
 }
